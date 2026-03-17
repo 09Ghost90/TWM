@@ -1,16 +1,66 @@
-# React + Vite
+# Sistema de Hotelaria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto academico da disciplina de Tecnologias Web e Mobile (TWM), com front-end em React + Vite e API REST em Node.js/Express.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- CRUD de hospedes
+- CRUD de quartos
+- CRUD de hospedagens (check-in/check-out)
+- Calculo automatico de diarias e valor total
+- Mascaras de CPF, CEP e telefone
+- Consulta de endereco via ViaCEP
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 7
+- React Router DOM 7
+- React-Bootstrap + Bootstrap 5
+- Axios
+- Node.js + Express (backend)
 
-## Expanding the ESLint configuration
+## Estrutura
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+.
+|- src/                  # Front-end React
+|- backend/              # API REST
+|- DOCUMENTACAO.md       # Documentacao completa do projeto
+```
+
+## Como executar
+
+Pre-requisito: Node.js >= 18
+
+### Front-end
+
+```bash
+npm install
+cp .env.example .env
+npm run dev
+```
+
+App em: `http://localhost:5173`
+
+### Back-end
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+API em: `http://localhost:3000`
+
+## Variavel de ambiente
+
+No arquivo `.env` da raiz:
+
+```env
+VITE_API_URL=http://localhost:3000
+```
+
+## Documentacao
+
+Detalhes de arquitetura, rotas e modelos de dados em `DOCUMENTACAO.md`.
